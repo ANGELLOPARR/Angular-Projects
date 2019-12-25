@@ -43,3 +43,50 @@ import { NameComponent } from `./name/name.component`;
   ],
   ...
 ```
+
+ALTERNATIVELY, use `ng generate component name` OR `ng g c name` which does the same thing:
+```
+angelloparr@Angellos-MacBook-Pro my-first-app % ng g c servers
+CREATE src/app/servers/servers.component.css (0 bytes)
+CREATE src/app/servers/servers.component.html (22 bytes)
+CREATE src/app/servers/servers.component.spec.ts (635 bytes)
+CREATE src/app/servers/servers.component.ts (273 bytes)
+UPDATE src/app/app.module.ts (920 bytes)
+```
+
+For HTML templates, for `templateURL`, which is needed in any angular component absolutely, we can make the string instead of pointing to an external file to point to some inline HTML code.
+
+ex.
+```
+templateURL:
+`
+<app-servers></app-servers>
+<app-servers></app-servers>
+<app-servers></app-servers>
+`
+```
+
+We can do the same with CSS, except with CSS, we change the `stylesURL` array to `styles` only. It is still an array, BUT now each item in the array is a different CSS style we're changing.
+
+ex.
+```
+styles: [`
+    h3 {
+        color: dodgerblue;
+    }
+`]
+```
+
+We can change the selector for a component to not only be a tag, but also an **attribute** or even a **class**.
+
+Default: `selector: 'app-server'`
+
+Corresponding HTML: `<app-server></app-server>`
+
+Attribute example: `selector: '[app-server]'`
+
+Corresponding HTML: `<div app-server></div>`
+
+Class example: `selector: '.app-server'`
+
+Corresponding HTML: `<div class="app-server"></div>`

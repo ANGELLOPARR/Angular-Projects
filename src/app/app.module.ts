@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 // we must include the imports for corresponding declarations
 // don't include extensions
-import { ServerComponent } from './server/server.component'
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component'
 
 @NgModule({
   /* Since Angular does NOT parse through files looking for classes,
@@ -14,7 +15,8 @@ import { ServerComponent } from './server/server.component'
   import them (noted above). */
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,
