@@ -90,3 +90,14 @@ Corresponding HTML: `<div app-server></div>`
 Class example: `selector: '.app-server'`
 
 Corresponding HTML: `<div class="app-server"></div>`
+
+### Property binding
+
+We can dynamically bind properties in HTML tags to certain values. In normal HTML, the property is just set already but with Angular we can change it within each specific tag. (versus messing with the DOM?).
+
+We do this by using brackets around a property in HTML.
+```
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+```
+
+**Property binding changes the DOM dynamically during runtime.**
