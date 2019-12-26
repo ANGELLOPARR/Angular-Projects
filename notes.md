@@ -119,3 +119,42 @@ ex.
 (click)="onCreateServer()">
     Add Server</button>
 ```
+
+### Directives
+
+Components are directives. Let's get started with that. Directives are instructions in the DOM. ex: `<p appTurnGreen>Receives green background</p>`
+
+Directives follow the following syntax:
+
+```
+@Directive({
+  selector: '[appTurnGreen]'
+})
+export class TurnGreenDirective {
+
+}
+```
+
+### ngIf
+
+ngIf is a **structural directive** It is in Angular by default and actually changes the DOM's HTML dynamically depending on if the ngIf evaluates to true or not. No hiding or anything, actually inserts or removes HTML. We use the `*` before the ngIf because it is *structural*
+
+ex.
+
+```
+<p *ngIf="serverCreated">Server has been created. 
+    Name of server is {{ serverName }}</p>
+```
+
+We can also use else statements. Example below.
+
+```
+<p *ngIf="serverCreated; else noServer">Server was created. Name of server is: {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No servers have been created.</p>
+</ng-template>
+```
+
+### ngStyle
+
+ngStyle is an **attribute directive**
