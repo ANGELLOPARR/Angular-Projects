@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 // we must include the imports for corresponding declarations
@@ -20,6 +21,7 @@ import { ServersComponent } from './servers/servers.component'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
   ],
   providers: [],
   // which components should we be aware of at the beginning (index.html)

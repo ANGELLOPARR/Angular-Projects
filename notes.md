@@ -96,8 +96,26 @@ Corresponding HTML: `<div class="app-server"></div>`
 We can dynamically bind properties in HTML tags to certain values. In normal HTML, the property is just set already but with Angular we can change it within each specific tag. (versus messing with the DOM?).
 
 We do this by using brackets around a property in HTML.
+
 ```
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 ```
 
 **Property binding changes the DOM dynamically during runtime.**
+
+### Event binding
+
+Event binding uses `()` while property binding uses `[]`
+
+We use them the same way, though whatever is event-binded typically calls some sort of function.
+
+**Important:** We can use event binding on any events that an HTML element has. To see a list of events, visit MDN's lists with a google search on whatever element you're using. Just remove the "on" from the first part of the event attribute. `onclick` --> `click`
+
+ex.
+
+```
+<button class="btn btn-primary" 
+[disabled]="!allowNewServers" 
+(click)="onCreateServer()">
+    Add Server</button>
+```
