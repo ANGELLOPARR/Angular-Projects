@@ -1,0 +1,10 @@
+<button type="button"
+    class="btn btn-primary"
+    (click)="onDisplayDetails()">Display Details
+</button>
+
+<p *ngIf="visible">Secret Password = tuna</p>
+
+<p *ngFor="let log of logArray"
+    [ngStyle]="{backgroundColor: log >= 5 ? 'blue' : 'white'}"
+    [ngClass]="{'white-color': log >= 5}">Log ID: {{ log }}</p>
