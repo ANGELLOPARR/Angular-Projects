@@ -10,14 +10,27 @@ import { Component } from '@angular/core';
     // MUST be a unique selector, DO NOT overwrite an HTML tag.
     // This is how we use this component in other HTML files
     selector: 'app-server',
-    templateUrl: './server.component.html'
+    templateUrl: './server.component.html',
+    styles: [`
+        .online {
+            color: white;
+        }
+    `]
 
 })
 export class ServerComponent {
     serverID: number = Math.floor(Math.random() * 100);
-    serverStatus: string = this.serverID % 2 == 0 ? 'online' : 'offline';
+    serverStatus: string = 'offline';
+
+    constructor() {
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
 
     getServerStatus() {
         return this.serverStatus;
+    }
+
+    getColor() {
+        return this.serverStatus === 'online' ? 'green' : 'red';
     }
 }
