@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 @Component({
     // MUST be a unique selector, DO NOT overwrite an HTML tag.
     // This is how we use this component in other HTML files
-    selector: 'app-server',
+    selector: 'app-basics-server',
     templateUrl: './server.component.html',
     styles: [`
         .online {
@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
     `]
 
 })
-export class ServerComponent {
+export class BasicsServerComponent {
     serverID: number = Math.floor(Math.random() * 100);
     serverStatus: string = 'offline';
 

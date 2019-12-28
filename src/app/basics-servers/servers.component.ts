@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-servers',
+  selector: 'app-basics-servers',
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
-export class ServersComponent implements OnInit {
+export class BasicsServersComponent implements OnInit {
   allowNewServers: boolean = false;
   serverCreationStatus: string = 'No server has been created';
   serverName: string;
