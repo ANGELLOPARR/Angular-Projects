@@ -1,4 +1,7 @@
-# MyFirstApp
+# Important notes:
+`master` branch is the template for starting new modules in Udemy. It should be untouched and instead other branches will branch from it. There'll be no merging, only branching.
+
+## MyFirstApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
