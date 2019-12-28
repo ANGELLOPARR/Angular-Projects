@@ -12,8 +12,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoggerComponent implements OnInit {
   visible: boolean = false;
-  logNumber: number = 1;
-  logArray: Array<number> = [];
+  //logNumber: number = 1;
+  logArray: Array<Date> = [];
 
   constructor() { }
 
@@ -21,8 +21,8 @@ export class LoggerComponent implements OnInit {
   }
 
   onDisplayDetails() {
-    this.visible = true;
-    this.logArray.push(this.logNumber++);
+    this.visible = !this.visible;
+    this.logArray.push(new Date());
   }
 
 }
