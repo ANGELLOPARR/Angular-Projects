@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
+// Asgn 2
+import { UserComponent } from './user/user.component';
+
 // Asgn 1
 import { WarningAlertComponent } from './asgn1/warning-alert/app.warningAlert';
 import { SuccessAlertComponent } from './asgn1/success-alert/success-alert.component';
@@ -21,6 +24,8 @@ import { ServersComponent } from './basics/servers/servers.component'
   import them (noted above). */
   declarations: [
     AppComponent,
+    //Asgn 2
+    UserComponent,
     //Asgn 1
     WarningAlertComponent,
     SuccessAlertComponent,
@@ -36,4 +41,4 @@ import { ServersComponent } from './basics/servers/servers.component'
   // which components should we be aware of at the beginning (index.html)
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
