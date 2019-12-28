@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 // Asgn 3
-import { LoggerComponent } from './logger/logger.component';
+import { LoggerComponent } from './asgn3/logger/logger.component';
 
 // Asgn 2
 import { UserComponent } from './asgn2/user/user.component';
