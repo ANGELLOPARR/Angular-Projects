@@ -1,12 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
+
+// Asgn 1
+import { WarningAlertComponent } from './asgn1/warning-alert/app.warningAlert';
+import { SuccessAlertComponent } from './asgn1/success-alert/success-alert.component';
+
 // we must include the imports for corresponding declarations
 // don't include extensions
-import { BasicsServerComponent } from './basics-server/server.component';
-import { BasicsServersComponent } from './basics-servers/servers.component'
+// Basics
+import { ServerComponent } from './basics/server/server.component';
+import { ServersComponent } from './basics/servers/servers.component'
 
 @NgModule({
   /* Since Angular does NOT parse through files looking for classes,
@@ -16,8 +21,12 @@ import { BasicsServersComponent } from './basics-servers/servers.component'
   import them (noted above). */
   declarations: [
     AppComponent,
-    BasicsServerComponent,
-    BasicsServersComponent
+    //Asgn 1
+    WarningAlertComponent,
+    SuccessAlertComponent,
+    //Basics
+    ServerComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,

@@ -19,4 +19,4 @@ points Angular to the app.component which has app-root selector.
 */
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+  .catch(err => console.log(err));
