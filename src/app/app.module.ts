@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 // Asgn 2
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './asgn2/user/user.component';
 
 // Asgn 1
 import { WarningAlertComponent } from './asgn1/warning-alert/app.warningAlert';
