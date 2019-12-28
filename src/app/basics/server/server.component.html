@@ -1,0 +1,10 @@
+<!-- we are using the directive ngStyle.
+We are property binding to a property OF the directive with the square
+brackets which just so happens to be the same name.
+It expects a JavaScript object where we define key-value pairs of:
+key: style name
+value: value of teh style -->
+<p [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}">
+    Server with ID: {{ serverID }} is {{ getServerStatus() }}
+</p>
