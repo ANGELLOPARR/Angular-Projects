@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
+// Asgn 3
+import { LoggerComponent } from './logger/logger.component';
+
 // Asgn 2
 import { UserComponent } from './asgn2/user/user.component';
 
@@ -24,12 +27,14 @@ import { ServersComponent } from './basics/servers/servers.component'
   import them (noted above). */
   declarations: [
     AppComponent,
-    //Asgn 2
+    // Asgn 3
+    LoggerComponent,
+    // Asgn 2
     UserComponent,
-    //Asgn 1
+    // Asgn 1
     WarningAlertComponent,
     SuccessAlertComponent,
-    //Basics
+    // Basics
     ServerComponent,
     ServersComponent
   ],
