@@ -17,7 +17,9 @@ import { SuccessAlertComponent } from './asgn1/success-alert/success-alert.compo
 // don't include extensions
 // Basics
 import { ServerComponent } from './basics/server/server.component';
-import { ServersComponent } from './basics/servers/servers.component'
+import { ServersComponent } from './basics/servers/servers.component';
+import { CockpitComponent } from './section5/cockpit/cockpit.component';
+import { ServerElementComponent } from './section5/server-element/server-element.component'
 
 @NgModule({
   /* Since Angular does NOT parse through files looking for classes,
@@ -36,7 +38,9 @@ import { ServersComponent } from './basics/servers/servers.component'
     SuccessAlertComponent,
     // Basics
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
