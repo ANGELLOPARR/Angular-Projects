@@ -9,7 +9,10 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
-  OnDestroy } from '@angular/core';
+  OnDestroy, 
+  ViewChild, 
+  ElementRef,
+  ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -28,6 +31,8 @@ export class ServerElementComponent implements
   // argument given to @Input decorator is the alias for the property name
   @Input('srvElement') element: {type: string, name: "string", }
   @Input() name: string;
+  @ViewChild('heading', {static: true}) header: ElementRef; 
+  @ContentChild('contentParagraph', {static: true}) paragraph: ElementRef;
 
   constructor() { 
     console.log("constructor called");
@@ -35,6 +40,9 @@ export class ServerElementComponent implements
 
   ngOnInit() {
     console.log("ngOnInit called");
+    // will have no value, hasn't been rendered yet.
+    console.log('HEADER TEXT IS: ' + this.header.nativeElement.textContent);
+    console.log('Paragraph content is: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -48,6 +56,7 @@ export class ServerElementComponent implements
 
   ngAfterContentInit() {
     console.log("ngAfterContentInit called");
+    console.log('Paragraph content is: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngAfterContentChecked() {
@@ -56,6 +65,8 @@ export class ServerElementComponent implements
 
   ngAfterViewInit() {
     console.log("ngAfterViewInit called");
+    console.log('HEADER TEXT IS: ' + this.header.nativeElement.textContent);
+    console.log('Paragraph content is: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngAfterViewChecked() {
