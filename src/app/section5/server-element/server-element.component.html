@@ -1,0 +1,9 @@
+<div
+  class="panel panel-default">
+  <div class="panel-heading" #heading>{{ name }}</div>
+  <div class="panel-body">
+    <!-- without this ng-content (WHICH IS A DIRECTIVE) tag, everything in another
+    HTML file for another component within the > < will be lost. -->
+    <ng-content></ng-content>
+  </div>
+</div>
