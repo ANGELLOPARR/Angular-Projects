@@ -61,6 +61,8 @@
       <app-logger></app-logger>
     </div>
   </div> -->
+
+<!--   
     <app-cockpit
       (createServer)="onServerAdded($event)"
       (bpCreate)="onBlueprintAdded($event)"></app-cockpit>
@@ -80,6 +82,71 @@
         </app-server-element>
       </div>
     </div>
+   -->
+
+
+   <!-- Section 5 -->
+  <!-- <div class="row">
+    <div class="col-xs-12">
+      <p>Add new Servers or blueprints!</p>
+      <label>Server Name</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerName">
+      <label>Server Content</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerContent">
+      <br>
+      <button
+        class="btn btn-primary"
+        (click)="onAddServer()">Add Server</button>
+      <button
+        class="btn btn-primary"
+        (click)="onAddBlueprint()">Add Server Blueprint</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <div
+        class="panel panel-default"
+        *ngFor="let element of serverElements">
+        <div class="panel-heading">{{ element.name }}</div>
+        <div class="panel-body">
+          <p>
+            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Bind it!</h3>
+      <ol>
+        <li>Create three new components: GameControl, Odd and Even &#10003;</li>
+        <li>The GameControl Component should have buttons to start and stop the game &#10003;</li>
+        <li>When starting the game, an event (holding a incrementing number) should get emitted each second (ref = setInterval()) &#10003;/li>
+        <li>The event should be listenable from outside the component &#10003;</li>
+        <li>When stopping the game, no more events should get emitted (clearInterval(ref)) &#10003;</li>
+        <li>A new Odd component should get created for every odd number emitted, the same should happen for the Even Component (on even numbers) &#10003;</li>
+        <li>Simply output Odd - NUMBER or Even - NUMBER in the two components &#10003;</li>
+        <li>Style the element (e.g. paragraph) holding your output text differently in both components &#10003;</li>
+      </ol>
+    </div>
+  </div>
+
+  <app-game-control (timerElapsed)="onTimerElapsed($event)"></app-game-control>
+  <hr>
+  <div class="row">
+    <div class="col-xs-6">
+      <app-even *ngFor="let evenNumber of evenList"
+        [data]=evenNumber></app-even>
+    </div>
+    <div class="col-xs-6">
+      <app-odd *ngFor="let oddNumber of oddList"
+        [data]=oddNumber></app-odd>
+    </div>
+  </div>
   
 
 </div>

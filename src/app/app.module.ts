@@ -19,7 +19,10 @@ import { SuccessAlertComponent } from './asgn1/success-alert/success-alert.compo
 import { ServerComponent } from './basics/server/server.component';
 import { ServersComponent } from './basics/servers/servers.component';
 import { CockpitComponent } from './section5/cockpit/cockpit.component';
-import { ServerElementComponent } from './section5/server-element/server-element.component'
+import { ServerElementComponent } from './section5/server-element/server-element.component';
+import { GameControlComponent } from './asgn4/game-control/game-control.component';
+import { OddComponent } from './asgn4/odd/odd.component';
+import { EvenComponent } from './asgn4/even/even.component'
 
 @NgModule({
   /* Since Angular does NOT parse through files looking for classes,
@@ -40,7 +43,10 @@ import { ServerElementComponent } from './section5/server-element/server-element
     ServerComponent,
     ServersComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
